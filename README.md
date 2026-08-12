@@ -11,12 +11,20 @@ Ensure you have [Nix](https://nixos.org/) installed with [flakes enabled](https:
 You can run the application directly without installing it:
 
 ```bash
-nix run
+nix run github:ArisoN-ext/PipeWireController-nix
 ```
 
 ### Build
 
 To build the package locally:
+
+```bash
+git clone https://github.com/ArisoN-ext/PipeWireController-nix
+```
+
+```bash
+cd PipeWireController-nix
+```
 
 ```bash
 nix build
