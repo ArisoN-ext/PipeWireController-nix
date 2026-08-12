@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PipeWire Controller
+Version=@version@
+Comment=Configure PipeWire, filter chains and HRIR virtual surround without editing files
+Type=Application
+Exec=@out@/bin/pipewire-control-center
+Icon=audio-card
+Terminal=false
+Categories=AudioVideo;Audio;Settings;
+Keywords=pipewire;audio;surround;hrir;equalizer;filter;pwcc;
+StartupWMClass=io.github.knightinfected.PipeWireControlCenter
