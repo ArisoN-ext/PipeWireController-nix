@@ -35,3 +35,21 @@ This will create a `result` symlink in the current directory. You can then run t
 ```bash
 ./result/bin/pipewire-control-center
 ```
+
+## Binary Cache
+
+To avoid building from source, you can use the pre-built binaries from [Cachix](https://app.cachix.org/cache/pipewirecontroller-nix).
+
+Add the following to your `nix.conf` (usually located at `~/.config/nix/nix.conf` or `/etc/nix/nix.conf`):
+```text
+substituters = https://cache.nixos.org https://pipewirecontroller-nix.cachix.org
+trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= pipewirecontroller-nix.cachix.org-1:wY/tr9Hxc0kvGW2zgh2DUjQI+LqLBCQ7bm9Wkr3dgdc=
+```
+
+For **NixOS**, add this to your `configuration.nix`:
+```nix
+nix.settings = {
+  substituters = [ "https://pipewirecontroller-nix.cachix.org" ];
+  trusted-public-keys = [ "pipewirecontroller-nix.cachix.org-1:wY/tr9Hxc0kvGW2zgh2DUjQI+LqLBCQ7bm9Wkr3dgdc=" ];
+};
+```
